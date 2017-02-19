@@ -14,6 +14,7 @@ section{
 	justify-content: center;
 }
 
+
 footer{
 	display: flex;
 	flex-flow: row;
@@ -21,7 +22,7 @@ footer{
 }
 
 article{
-	flex: 3 3 1em;
+	flex: 3 1 1em;
 	order: 2;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -96,7 +97,6 @@ aside{
 	display: flex;
 	flex-flow: row;
 	justify-content: center;
-	padding: 1;
 	margin: 0;
 	list-style: none;
 }
@@ -127,4 +127,180 @@ aside{
 	background-color: #326632;
 	color: white;
 	text-decoration: none;
+}
+
+label, input{
+	display: none;
+}
+
+@media (min-width: 48.01em) and (max-width: 60em){
+	footer{
+		display: flex;
+		flex-flow: column;
+	}
+
+	article{
+		flex: 2 2 1em;
+	}
+
+	aside{
+		flex: 1 1 0;
+	}
+
+	footer article{
+		width: 100%;
+		order: 1;
+	}
+
+	footer div{
+		width: 100%;
+		display: flex;
+		flex-flow: row;
+		order: 2;
+		padding-left: 5px;
+		padding-bottom: 5px;
+	}
+
+	.boxa,
+	.boxb,
+	.boxc,
+	.boxd{
+		position: static;
+		margin: 0px;
+	}
+}
+
+@media (min-width: 30.01em) and (max-width: 48em){
+
+
+	.topmenu{
+		padding-left: 0px;
+	}
+
+	article{
+		width: 100%;
+		float: left;
+		box-sizing: border-box;
+	}
+
+	section.titlecolor{
+		float: left;
+		width: 100%;
+	}
+
+	aside{
+		width: 50%;
+		box-sizing: border-box;
+	}
+
+	section{
+		display: block;
+		flex-flow: row;
+	}
+
+	section h1{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	footer{
+		width: 100%;
+	}
+
+	.left{
+		float: left;
+	}
+
+	.right{
+		float: left;
+	}
+
+	div{
+		display: none;
+	}
+}
+
+@media (max-width: 30em){
+	body{
+		padding-bottom: 30px;
+	}
+
+	article,
+	aside{
+		width: 100%;
+		flex: 1 1 0;
+		box-sizing: border-box;
+	}
+	section{
+		display: flex;
+		flex-flow: column;
+	}
+
+	section h1{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.left{
+		order: 2;
+
+	}
+	div{
+		display: none;
+	}
+
+	nav{
+		position: fixed;
+		bottom: 30px;
+		width: 100%;
+		display: none;
+	}
+
+	.topmenu{
+		flex-flow: column;
+		width: 100%;
+		text-align: center;
+		padding-left: 0px;
+	}
+
+
+	.topmenu li{
+		border: 0;
+		border-bottom: 1px solid lime;
+		padding: 0;
+	}
+
+	.topmenu li:last-child{
+		border-bottom: none;
+	}
+
+	label{
+		display: flex;
+		position: fixed;
+		bottom: 0%;
+		background-color: blue;
+		color: white;
+		width: 100%;
+		text-align: center;
+		height: 30px;
+		padding-top: 3px;
+		box-sizing: border-box;
+	}
+
+	label{
+		cursor: pointer;
+		display: inline-block;
+	}
+
+	input{
+		display: none;
+	}
+
+	input:checked ~ nav{
+		display: flex;
+	}
+
+
+
+
 }
